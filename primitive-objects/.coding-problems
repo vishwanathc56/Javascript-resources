@@ -1,1 +1,108 @@
 
+Write a function to add two numbers together and return the result:
+function addNumbers(a, b) {
+  return a + b;
+}
+
+Write a function to check if a number is even or odd:
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+
+Write a function to find the maximum number in an array:
+function findMax(arr) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+Write a function to check if a string is a palindrome:
+function isPalindrome(str) {
+  str = str.toLowerCase().replace(/[^a-zA-Z0-
+
+
+
+Write a function to check if a given value is a primitive data type:
+function isPrimitive(val) {
+  return (typeof val !== 'object' && typeof val !== 'function') || val === null;
+}
+
+Write a function to check if a given value is an object:
+function isObject(val) {
+  return typeof val === 'object' && val !== null;
+}
+
+Write a function to merge two objects:
+function mergeObjects(obj1, obj2) {
+  return Object.assign({}, obj1, obj2);
+}
+
+Write a function to clone an object:
+function cloneObject(obj) {
+  return Object.assign({}, obj);
+}
+
+Write a function to sort an array of objects by a given property:
+function sortObjectsByProperty(arr, prop) {
+  return arr.sort((a, b) => a[prop] - b[prop]);
+}
+
+Write a function to check if a given value is an array:
+function isArray(val) {
+  return Array.isArray(val);
+}
+
+Write a function to concatenate two arrays:
+function concatArrays(arr1, arr2) {
+  return arr1.concat(arr2);
+}
+
+Write a function to remove a property from an object:
+function removeProperty(obj, prop) {
+  delete obj[prop];
+}
+
+Write a function to convert a string to a number:
+function stringToNumber(str) {
+  return Number(str);
+}
+
+Write a function to convert a number to a string:
+function numberToString(num) {
+  return num.toString();
+
+Write a function to count the number of keys in an object:
+function countKeys(obj) {
+  return Object.keys(obj).length;
+}
+
+Write a function to get the values of an object as an array:
+function objectValues(obj) {
+  return Object.values(obj);
+}
+
+Write a function to get the keys of an object as an array:
+function objectKeys(obj) {
+  return Object.keys(obj);
+}
+
+Write a function to check if a given property exists in an object:
+function hasProperty(obj, prop) {
+  return obj.hasOwnProperty(prop);
+}
+
+Write a function to create an object from key-value pairs:
+function createObject(keys, values) {
+  const obj = {};
+  for (let i = 0; i < keys.length; i++) {
+    obj[keys[i]] = values[i];
+  }
+  return obj;
+}
+
+
