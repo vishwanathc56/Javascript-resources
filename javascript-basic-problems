@@ -1,0 +1,9 @@
+1) console.log(NaN === NaN);
+console.log(NaN == NaN) ;
+
+ans  :  false, false 
+
+NaN is not equal to itself in Js, because NaN is used to indicate an error in a mathematical operation and should not be considered equivalent to any value. 
+So the correct answer will be false,false
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
