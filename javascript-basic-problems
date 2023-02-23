@@ -7,3 +7,22 @@ NaN is not equal to itself in Js, because NaN is used to indicate an error in a 
 So the correct answer will be false,false
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let x = [1, 2, 3];
+let y = [...x];
+let z = x;
+x.push(4);
+console.log(y);
+console.log(z);
+
+ans : [1,2,3] [1,2,3,4]
+
+Here's an explanation of what's happening:
+let x = [1, 2, 3] creates an array x containing the elements 1, 2, and 3.
+let y = [...x] creates a new array y containing the same elements as x by spreading the elements of x.
+let z = x creates a reference to the same array x in a new variable z.
+x.push(4) modifies the original array by adding element 4 to the end of the array.
+Since y is a new array created by spreading the elements of x, it does not reference the same array in memory, so the original array x is not modified.
+On the other hand, z is a reference to the same array in memory, so when the original array x is modified, the change is reflected in the z variable as well.
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
