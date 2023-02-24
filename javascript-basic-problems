@@ -26,10 +26,15 @@ Since y is a new array created by spreading the elements of x, it does not refer
 On the other hand, z is a reference to the same array in memory, so when the original array x is modified, the change is reflected in the z variable as well.
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-const res = [1,2,3,4,5].filter(js => false);
+3)const res = [1,2,3,4,5].filter(js => false);
 console.log(res);
 
 ans : []
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) console.log(typeof NaN);
+
+  ans : Number
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
