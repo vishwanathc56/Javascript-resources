@@ -10,51 +10,51 @@
 4)Check if a string is a valid number:
   !isNaN(parseFloat(string))
 //--------------------------------------
-2)Get the current date and time:
+5)Get the current date and time:
   new Date().toString()
 //--------------------------------------
-2)Check if a variable is an array:
+6)Check if a variable is an array:
 Array.isArray(variable)
 //--------------------------------------
-2)Check if a variable is an object:
+7)Check if a variable is an object:
 typeof variable === "object"
 //--------------------------------------
-2)Convert an array to a string:
+8)Convert an array to a string:
 array.join(",")
 //--------------------------------------
-2)Check if a variable is a function:
+9)Check if a variable is a function:
 typeof variable === "function"
 //--------------------------------------
-2)Convert an object to an array:
+10)Convert an object to an array:
 Object.values(object)
 //--------------------------------------
-2)Count the occurrences of an element in an array:
+11)Count the occurrences of an element in an array:
 array.filter(x => x === element).length
 //--------------------------------------
-2)Create a new object with a dynamic key and value:
+12)Create a new object with a dynamic key and value:
 { [key]: value }
 //--------------------------------------
-2)Check if a string is a palindrome:
+13)Check if a string is a palindrome:
 string === string.split("").reverse().join("")
 //--------------------------------------
-2)Get the the sum of all the numbers in an array
+14)Get the the sum of all the numbers in an array
 array.reduce((a, b) => a + b, 0));
 //--------------------------------------
-2) Get the current timestamp:
+15) Get the current timestamp:
 Date.now()
 //--------------------------------------
-2)Check if a variable is null:
+16)Check if a variable is null:
 variable === null
 //--------------------------------------
-2)Check if a variable is undefined:
+17)Check if a variable is undefined:
 typeof variable === "undefined"
 //--------------------------------------
-2)Find the minimum value in an array
+18)Find the minimum value in an array
 Math.min(...array)
 //--------------------------------------
-2) Check if an array is empty:
+19) Check if an array is empty:
 array.length === 0
 //--------------------------------------
-2)Create a new array with a specified range of numbers:
+20)Create a new array with a specified range of numbers:
 Array.from({ length: n }, (_, i) => i)
 
