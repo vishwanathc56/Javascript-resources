@@ -21,4 +21,5 @@ console.warn(a[0]===b[0]); // true
   
 console.warn(...z); // 1 2 3 4  converted to string from array due to destructuring
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
-5)
+5) console.warn(typeof NaN);  //Number 
+
