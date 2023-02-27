@@ -117,3 +117,12 @@ Explanation :
     Strict comparator, comparing data type of each value, it's compare 10 (number) to '10' (string) so it would return false
     false; num is an integer but in the conditional statement, num is being equated to a string using strictly equal sign
     
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  8) JS #JavaScript-with-JC
+    const calc = eval("10*10+5");
+    console.log(calc);
+    
+    Ans : 105
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  9)
+    
