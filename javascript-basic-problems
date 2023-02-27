@@ -98,3 +98,22 @@ Explanation :
       - This is why both 
       "{ age: 18 } === { age: 18 }" and 
       "{ age: 18 } == { age: 18 }" return false.
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  7) function equalTo(){
+      let num = 10;
+      if (num === '10'){
+        return true;
+      } else {
+        return false;
+      }
+    }
+    let result = equalTo();
+    console.log(result);
+    
+    Ans :  false
+    
+    expl :  
+    Strict comparator, comparing data type of each value, it's compare 10 (number) to '10' (string) so it would return false
+    false; num is an integer but in the conditional statement, num is being equated to a string using strictly equal sign
+    
