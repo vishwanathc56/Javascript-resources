@@ -16,28 +16,29 @@ const animals = [
 ]
 
 // Basic Array
-// const [animal1] = animals;
-// console.log(animal1); { name: 'Dog', Legs: 4 }
+const [animal1] = animals;
+console.log(animal1); { name: 'Dog', Legs: 4 }
 
-// const [animal1, cat] = animals;
-// console.log(cat);     { name: 'Cat', Legs: 40 }
+const [animal1, cat] = animals;
+console.log(cat); { name: 'Cat', Legs: 40 }
 
 // Array with default
-// const [dog, cat, fish, bird='Jon'] = animals;
-// console.log(bird); Jon 
+const [dog, cat, fish, bird = 'Jon'] = animals;
+console.log(bird); Jon
 
 // Array with ignore    
-// const [, cat] = animals;
-// console.log(cat);    { name: 'Cat', Legs: 40 }
+const [, cat] = animals;
+console.log(cat); { name: 'Cat', Legs: 40 }
 
-// const [, , fish] = animals;
-// console.log(fish);      { name: 'Fish', Legs: 0 }
+const [, , fish] = animals;
+console.log(fish); { name: 'Fish', Legs: 0 }
+
 //Array with rest
-// const [dog, ...rest] = animals;
-// console.log(rest);     [ { name: 'Cat', Legs: 40 }, { name: 'Fish', Legs: 0 } ]
+const [dog, ...rest] = animals;
+console.log(rest);[{ name: 'Cat', Legs: 40 }, { name: 'Fish', Legs: 0 }]
 
-// const [, cat, ...rest] = animals;
-// console.log(rest);     [ { name: 'Fish', Legs: 0 } ]
+const [, cat, ...rest] = animals;
+console.log(rest);[{ name: 'Fish', Legs: 0 }]
 
 // Function
 function greeting(args) {
