@@ -42,6 +42,34 @@ console.log(deepCopy.b.c)
   console.log(shallowCopy[0] === originalArray[0]); // true
   console.log(deepCopy[0] === originalArray[0]); // false
 //------------------------------------------------------------------------------------------------------------------------------------------------------
+// Given an object containing nested objects, write a function that creates a shallow copy and a deep copy of the object.
+
+const originalObject = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
+  },
+};
+
+function copyObject(originalObject) {
+  // Create a shallow copy of the original object using the Object.assign() method.
+  const shallowCopy = Object.assign({}, originalObject);
+
+  // Create a deep copy of the original object using the JSON.parse() and JSON.stringify() methods.
+  const deepCopy = JSON.parse(JSON.stringify(originalObject));
+
+  return [shallowCopy, deepCopy];
+}
+
+// Test the function
+const [shallowCopy, deepCopy] = copyObject(originalObject);
+
+console.log(shallowCopy.address === originalObject.address); // true
+console.log(deepCopy.address === originalObject.address); // false
 
 
 
