@@ -132,4 +132,20 @@ Explanation :
      })
     console.log(result,items); // false/undefined, [1,4,1,7,8,9] 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-  10)
+  10) var a = 5;
+      function multiply() {
+      a = 10;
+      console.log(a * 2); 
+      }
+      multiply();
+      console.log(a);
+      // 20
+      // 10
+      
+      expln :  The variable a is declared and assigned a value of 5.
+      The function multiply() is defined. Inside the function, the value of a is set to 10, and then a is multiplied by 2 and the result is printed to the console (giving us the output 20).
+      The multiply() function is called, which sets the value of a to 10 and prints the result of a * 2 to the console.
+      After the function is called, we print the value of a to the console, which is now 10.
+      Note that because the a variable is declared outside of the multiply() function, it is a global variable and can be accessed and modified from anywhere in the code. When we call multiply(), the value of a is changed to 10 inside the function, and this new value persists even after the function returns. Therefore, when we print the value of a to the console again after calling multiply(), we see that it is now 10.
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  11)      
