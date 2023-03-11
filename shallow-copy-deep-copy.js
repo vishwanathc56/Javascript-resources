@@ -73,3 +73,30 @@ console.log(deepCopy.address === originalObject.address); // false
 
 
 
+// Given an array of objects, write a function that creates a shallow copy and a deep copy of the array and sorts the copies based on a specified property.
+
+const originalArray = [  { id: 1, name: "Alice", age: 25 },  { id: 2, name: "Bob", age: 30 },  { id: 3, name: "Charlie", age: 35 },];
+
+function copyAndSortArray(originalArray, prop) {
+  // Create a shallow copy of the original array using the slice() method.
+  const shallowCopy = originalArray.slice();
+
+  // Create a deep copy of the original array using the JSON.parse() and JSON.stringify() methods.
+  const deepCopy = JSON.parse(JSON.stringify(originalArray));
+
+  // Sort the shallow copy and deep copy based on the specified property.
+  shallowCopy.sort((a, b) => a[prop] - b[prop]);
+  deepCopy.sort((a, b) => a[prop] - b[prop]);
+
+  return [shallowCopy, deepCopy];
+}
+
+// Test the function
+const [shallowCopy, deepCopy] = copyAndSortArray(originalArray, "age");
+
+console.log(shallowCopy[0].name); // "Alice"
+console.log(deepCopy[0].name); // "Alice"
+console.log(shallowCopy[2].name); // "Charlie"
+console.log(deepCopy[2].name); // "Charlie"
+
+
