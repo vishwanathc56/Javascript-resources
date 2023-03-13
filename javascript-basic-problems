@@ -148,4 +148,4 @@ Explanation :
       After the function is called, we print the value of a to the console, which is now 10.
       Note that because the a variable is declared outside of the multiply() function, it is a global variable and can be accessed and modified from anywhere in the code. When we call multiply(), the value of a is changed to 10 inside the function, and this new value persists even after the function returns. Therefore, when we print the value of a to the console again after calling multiply(), we see that it is now 10.
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-  11) console.log(NaN == NaN)  // false      
+  11)  
