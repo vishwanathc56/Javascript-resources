@@ -183,4 +183,20 @@ Explanation :
 
         If " x " would have been "[ 9 ]"; the result would have been "9 1", and if it would have been an array with multiple elements, "[ 1, 2, 3]" for example; the result would have been " 1, 2, 3 1". This is one of the reasons why Typescript is getting so popular, since this would be possible with Javascript and it's known as type coercion, which can be a useful feature in some cases, but it also could let you to so many bugs and unexpected results as in this exercise.
  // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-   14) 
+   14) const nums = [2, 7, 11, 15];
+
+        const target = 9;
+
+        const output= [];
+
+        for (let i = 0; i < nums.length-1; i++) {  
+            for (let j = i + 1;j < nums.length; j++) {
+                if (nums[i] + nums[j] ===target) { 
+                    output.push([i, j]);
+                }
+            }
+        }
+
+        console.log(... output);  // [0,1]
+ // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 15)
