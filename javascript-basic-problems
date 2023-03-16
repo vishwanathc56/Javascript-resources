@@ -153,4 +153,9 @@ Explanation :
       console.log(b) // 3
       
       When the piece of code is run, the variable a is assigned 3 first. Then variable b is assigned the value of variable a, but variable a is then decremented (a--). Therefore, variable b takes the value 3 and variable a drops to 2.
-      However, although the value of variable a is 2, the value of variable b is output as the value of variable b is used in console.log().
+      However, although the value of variable a is 2, the value of variable b is output as the value of variable b is used in console.log(). 
+ // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  11) for(let i=0;i<5;i++){
+        setTimeout(()=>console.log(i),0) // 0,1,2,3,4
+      }
+ // --------------------------------------------------------------------------------------------------------------------------------------------------------------
