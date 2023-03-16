@@ -162,6 +162,13 @@ Explanation :
    12) const x = [1, 2, 3];
       x[-1] = -1;
 
-      console.log(x[x.indexOf(10000)]);  // -1
+      console.log(x[x.indexOf(10000)]);  // -1 
+      
+      expl : x[x.indexOf(10000)]
+
+        x.indexOf(10000) returns -1 because indexOf return -1 if index is not found on the given value.
+
+        Then
+      x[-1] returns -1 because we assigned it.
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-   13)
+   13) 
