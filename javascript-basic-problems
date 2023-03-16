@@ -202,4 +202,4 @@ Explanation :
  15) let str= "abcba";
      let str1 = str.split("").reverse().join("");
 
-    console.log(str===str1);
+    console.log(str===str1);   //true
