@@ -171,4 +171,16 @@ Explanation :
         Then
       x[-1] returns -1 because we assigned it.
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-   13) 
+   13)  let x =[1];
+
+        let y =x + 1;
+
+         console.log(y); //11
+
+        Solution: "11" 
+
+        First we declare a variable "x" as an array with just one element "[ 1 ]", then we declare "y = x + 1" --> "y = [1] + 1"; we are mixing 2 types of data, one warray, and one primitive type of data. Here the " + " operator is concatenating the array, which is converted to a string, and the number, which is also transformed to a string; the result is " 1 1 ".
+
+        If " x " would have been "[ 9 ]"; the result would have been "9 1", and if it would have been an array with multiple elements, "[ 1, 2, 3]" for example; the result would have been " 1, 2, 3 1". This is one of the reasons why Typescript is getting so popular, since this would be possible with Javascript and it's known as type coercion, which can be a useful feature in some cases, but it also could let you to so many bugs and unexpected results as in this exercise.
+ // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+   14) 
