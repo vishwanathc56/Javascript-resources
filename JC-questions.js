@@ -45,3 +45,24 @@ Overall logic is:
  console.log(arr); // after moving all the 0 to at the end this will log [𝟮, 𝟭, 𝟮, 𝟬, 𝟬]
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Array.prototype.skip = function (arg){
+    let array = this;
+    
+    // if(typeof arg === 'functions'){
+    //     return array.filter((num)=> !arg(num))
+    // } else {
+    //     return array.filter((num)=> num!==arg)
+    // }
+    if (typeof arg === "function") {
+      return array.filter((num) => !arg(num));
+    } else {
+      return array.filter((num) => num !== arg);
+    }
+}
+
+let res1 = [1,1,2,3,4].skip(1);
+let res2 = [1,1,2,3,4].skip((num)=>num<3);
+
+console.log(res1);  [ 2, 3, 4 ]
+console.log(res2);  [ 3, 4 ]
