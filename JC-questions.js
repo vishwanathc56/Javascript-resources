@@ -45,7 +45,7 @@ Overall logic is:
  console.log(arr); // after moving all the 0 to at the end this will log [𝟮, 𝟭, 𝟮, 𝟬, 𝟬]
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
-
+    //polyfill for skip function 
 2) Array.prototype.skip = function (arg){
     let array = this;
     
