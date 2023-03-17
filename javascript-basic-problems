@@ -208,3 +208,14 @@ Explanation :
     console.log(add());    // 3
     console.log(add(5));   //7 
     console.log(add(undefined, 10)); // 11
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 17) const users = [];
+let user1 = {name: 'JS'}
+let user2 = {name: 'TS'}
+
+users.push(user1);
+users.push(user2);
+
+user2 = user1;
+
+console.log(users[1] === user2)  // false
