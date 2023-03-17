@@ -50,10 +50,7 @@ Overall logic is:
     let array = this;
     
     // if(typeof arg === 'functions'){
-    //     return array.filter((num)=> !arg(num))
-    // } else {
-    //     return array.filter((num)=> num!==arg)
-    // }
+    // }   // [1,1,2,3,4] ????
     if (typeof arg === "function") {
       return array.filter((num) => !arg(num));
     } else {
