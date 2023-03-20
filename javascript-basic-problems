@@ -240,4 +240,12 @@ console.log(users[1] === user2)  // false
     const y = [1,2,3]
     console.log(x===y)  // false
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-21)
+21) var test = "a";
+    var result;
+    switch (test) {
+      case "a": result += 20;
+      case "b": result += 15;
+      case "c": result += 0;
+      default: result += 10;
+    }
+    console.log(result)
