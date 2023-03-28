@@ -99,3 +99,22 @@ console.log(a,b,c,d)
 log(1,2,3) 
 
 ans : bfe 2 3 undefined
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+const arr =[1,2,3,4];
+
+let i =0 ;
+
+let j=  arr.length-1;
+
+while(i<j){
+    console.log([arr[i],arr[j]] , [arr[j],arr[i]]);
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+    i++
+    j--
+}
+
+console.log(arr); 
+
+ans :  [ 4, 3, 2, 1 ]
+
+
