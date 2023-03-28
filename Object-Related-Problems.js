@@ -19,3 +19,12 @@ console.log(x.print());
 Answer: false
 Reason: There is no binding of 'this' with arrow function
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) const obj = {name :'jack',age:27}
+const a= 'name' in obj;
+console.log(a)  
+
+ans : true 
+‘name’ in obj checks for whether or not the property ‘name’ is in the object obj, returning true if the property exists and false if the property does not exist. 
+Since, the property ’name’ does exist in the object obj, true will be printed to the console.
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
