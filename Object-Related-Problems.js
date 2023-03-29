@@ -28,3 +28,20 @@ ans : true
 ‘name’ in obj checks for whether or not the property ‘name’ is in the object obj, returning true if the property exists and false if the property does not exist. 
 Since, the property ’name’ does exist in the object obj, true will be printed to the console.
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 4) let players = [
+        { name:"VK", role:"Batsman"},
+        { name:"HP", role:"All-Rounder"},
+        { name:"RJ", role:"All-Rounder"},
+    ];
+
+    let result = players.some((player)=>{
+        return player.role === "Batsman";
+    })
+
+    console.log(result)   
+
+    ans : true 
+    
+    True, simply because array some method takes a callback function as an argument, that callback function is executed once for every element, so it returns true if atleast one of the array elements matches the criteria. Then it stops.
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
