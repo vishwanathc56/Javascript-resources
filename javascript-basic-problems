@@ -270,5 +270,16 @@ console.log(users[1] === user2)  // false
     3
     2
  //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-24)
+24) var a = 47;
+    var b = "yourname";
 
+    console.log(a < b) // A
+    console.log(a > b) // B
+    console.log(a == b) // C
+    
+    ans : false false false 
+    
+    In JavaScript, when you use the <, >, or == operators to compare values of different data types, JavaScript will try to convert the values to a common data type so that they can be compared. In this case, since a is a number and b is a string, JavaScript will try to convert b to a number before performing the comparison.
+
+    However, since b is not a valid number, the comparison will result in NaN (Not a Number), which will produce unexpected results.
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
