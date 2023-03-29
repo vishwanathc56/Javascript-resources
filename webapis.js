@@ -29,3 +29,15 @@ after each loop iteration a setTimeout callback will set in callbacks or event q
 
 in second loop, variable i is declared with let keyword. variable declared with let or const have block scope. so during each iteration new block is created and i will have new value in each block. so setTimeout callback print new value in console.
 0,1,2,3,4
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+ let arr =[1, 2, 3, 4]
+for(var i=0; i<4; i++){
+setTimeout(()=>{
+console.log(arr[i]);
+},1000);
+}
+
+ans :  undefined undefined undefined undefined
+
+As setTimeout is asynchronous by the time it's callback function is executed the value of i would be four thus condole would print undefined as arr[4] results in array out of bounds thus you get undefined printed four times. To solve this you must wrap setTimeout inside a function taking i as argument and this function must be immediately invoked within the for loop for it to print array values on each of its iteration. This is a tricky question I had to get help from chatgpt.
+//-------------------------------------------------------------------------------------------------------------------------------------------------
