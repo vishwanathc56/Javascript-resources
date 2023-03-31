@@ -283,3 +283,11 @@ console.log(users[1] === user2)  // false
 
     However, since b is not a valid number, the comparison will result in NaN (Not a Number), which will produce unexpected results.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   25) What will be the typeof below Javascript code ??
+
+      function sayHi() {
+      return (() => 0)();
+      }
+
+      console.log(typeof sayHi()) // number
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------
