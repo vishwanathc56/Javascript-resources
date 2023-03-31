@@ -44,4 +44,15 @@ Since, the property ’name’ does exist in the object obj, true will be printe
     
     True, simply because array some method takes a callback function as an argument, that callback function is executed once for every element, so it returns true if atleast one of the array elements matches the criteria. Then it stops.
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+    5)const entries = [["name", "alice"], ["age", 30]];
+
+        let obj = {};
+        for(const [key, value] of entries){
+            obj[key] = value;
+        }
+                    //OR 
+
+        const obj = Object.fromEntries(entries);
+
+        console.log(obj);   // { name: 'alice', age: 30 }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
