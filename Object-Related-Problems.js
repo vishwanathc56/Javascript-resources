@@ -56,3 +56,23 @@ Since, the property ’name’ does exist in the object obj, true will be printe
 
         console.log(obj);   // { name: 'alice', age: 30 }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    6) const person = {
+            name : "JC",
+            age: 24,
+            skill : {
+                lang : "JavaScript",
+            }
+        }
+
+        Object.freeze(person);
+
+        let res1 = Object.isExtensible(person);
+        let res2 =  Object.isExtensible(person.skill)
+
+        console.log(res1);             // false
+        console.log(res2);             // true
+        
+        
+        As mentioned in an earlier post https://lnkd.in/dzGGtiHu. 
+        The 𝗢𝗯𝗷𝗲𝗰𝘁.𝗳𝗿𝗲𝗲𝘇𝗲 method in JavaScript freezes or locks an object. This means new properties cannot be added to an object and existing properties cannot be set or deleted. This makes all non-inherited data properties read-only. Also, note that 𝗢𝗯𝗷𝗲𝗰𝘁.𝗳𝗿𝗲𝗲𝘇𝗲() 𝗺𝗲𝘁𝗵𝗼𝗱 𝗱𝗼𝗲𝘀 𝗻𝗼𝘁 𝗮𝗳𝗳𝗲𝗰𝘁 𝘁𝗵𝗲 𝗻𝗲𝘀𝘁𝗲𝗱 𝗼𝗯𝗷𝗲𝗰𝘁𝘀. 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
