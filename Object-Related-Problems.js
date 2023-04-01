@@ -76,3 +76,22 @@ Since, the property ’name’ does exist in the object obj, true will be printe
         As mentioned in an earlier post https://lnkd.in/dzGGtiHu. 
         The 𝗢𝗯𝗷𝗲𝗰𝘁.𝗳𝗿𝗲𝗲𝘇𝗲 method in JavaScript freezes or locks an object. This means new properties cannot be added to an object and existing properties cannot be set or deleted. This makes all non-inherited data properties read-only. Also, note that 𝗢𝗯𝗷𝗲𝗰𝘁.𝗳𝗿𝗲𝗲𝘇𝗲() 𝗺𝗲𝘁𝗵𝗼𝗱 𝗱𝗼𝗲𝘀 𝗻𝗼𝘁 𝗮𝗳𝗳𝗲𝗰𝘁 𝘁𝗵𝗲 𝗻𝗲𝘀𝘁𝗲𝗱 𝗼𝗯𝗷𝗲𝗰𝘁𝘀. 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    7) const person = {};
+
+        Object.defineProperties(person, {
+            name : {
+                value: "jc",
+                writable: true,
+            },
+            age : {
+                value: 24,
+                writable: false
+            },
+        });
+
+        person.name = "VK",
+        person.age = 34;
+
+        console.log(person.name);  // vk
+        console.log(person.age);   // 24
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
