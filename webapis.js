@@ -41,3 +41,4 @@ ans :  undefined undefined undefined undefined
 
 As setTimeout is asynchronous by the time it's callback function is executed the value of i would be four thus condole would print undefined as arr[4] results in array out of bounds thus you get undefined printed four times. To solve this you must wrap setTimeout inside a function taking i as argument and this function must be immediately invoked within the for loop for it to print array values on each of its iteration. This is a tricky question I had to get help from chatgpt.
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+ 
