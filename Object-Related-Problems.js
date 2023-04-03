@@ -104,4 +104,18 @@ Since, the property ’name’ does exist in the object obj, true will be printe
         
     ans : undefined undefined undefined
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-     
+   9) class Person {
+    constructo(name){
+        this.name = name
+        }
+    }
+
+    Person.prototype.age = 24;
+
+    const jayesh = new Person("JC");
+
+     console.log(Object.hasOwn(jayesh, "name"));
+     console.log(Object.hasOwn(jayesh, "age")); 
+
+    ans : false false
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
