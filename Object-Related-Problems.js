@@ -100,5 +100,8 @@ Since, the property ’name’ does exist in the object obj, true will be printe
        };
        example(0, 1, 2);
         
+       example(null, null, null); // TypeError: Cannot destructure property 'a' of 'object null' as it is null.
+        
     ans : undefined undefined undefined
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+     
