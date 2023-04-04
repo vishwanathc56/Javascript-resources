@@ -1,5 +1,18 @@
+//P2 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗼𝘂𝘁𝗽𝘂𝘁 𝘁𝗼 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 & 𝘄𝗵𝘆 ?
 
+console.log(new String("yes")===new String("yes"));
+console.log("yes"==="yes"); 
 
+a)True, True
+b)False, True
+c)True, False
+d)False, False
+
+ans : FALSE, TRUE
+
+new String('yes') creates new object everytime. So, new String('yes') === new String('yes') will be false because both the objects will be different.
+
+While 'yes' === 'yes' is just a normal comparison of primitive string type and so it will be true.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 //P3 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗼𝘂𝘁𝗽𝘂𝘁 𝘁𝗼 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 & 𝘄𝗵𝘆 ?
 
