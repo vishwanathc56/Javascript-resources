@@ -1,3 +1,13 @@
+//P1 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗼𝘂𝘁𝗽𝘂𝘁 𝘁𝗼 𝘁𝗵𝗲 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 & 𝘄𝗵𝘆 ?
+
+const x = new String("tricky");
+const y = x;
+console.log(x===y);   //a)True  b)False
+
+ans: TRUE
+Because x has address of string obj and same is assigned to Y. Since both point to same loaction of string object, TRUE is answer.
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 //P2 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗼𝘂𝘁𝗽𝘂𝘁 𝘁𝗼 𝗰𝗼𝗻𝘀𝗼𝗹𝗲 & 𝘄𝗵𝘆 ?
 
 console.log(new String("yes")===new String("yes"));
