@@ -1,1 +1,109 @@
 
+What are the advantages of using JavaScript?
+You want a developer who really knows how to play to the strengths of your chosen platform. Some key advantages of JavaScript are listed below for your convenience.
+
+Lightweight: JavaScript can be executed within the user’s browser without having to communicate with the server, saving on bandwidth.
+Versatile: JavaScript supports multiple programming paradigms—object-oriented, imperative, and functional programming and can be used on both front-end and server-side technologies.
+Sleek Interactivity: Because tasks can be completed within the browser without communicating with the server, JavaScript can create a smooth "desktop-like" experience for the end user.
+Rich Interfaces: From drag-and-drop blocks to stylized sliders, there are numerous ways that JavaScript can be used to enhance a website’s UI/UX.
+Prototypal Inheritance: Objects can inherit from other objects, which makes JavaScript so simple, powerful, and great for dynamic applications.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+What are the disadvantages of using JavaScript?
+Experienced coders won’t just be able to rave about their favorite language’s strengths—they will also be able to talk about its weaknesses. 
+JavaScript’s main weakness is security. Look for answers on how it can be exploited. A secondary weakness is JavaScript’s ubiquity and versatility—it can be a double-edged sword in that there’s a lot of room for programming quirks that can lead to inconsistent performance across different platforms.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Explain the difference between classical inheritance and prototypal inheritance.
+The great thing about JavaScript is the ability to do away with the rigid rules of classical inheritance and let objects inherit properties from other objects. - Classical Inheritance: A constructor function instantiates an instance via the "new" keyword. This new instance inherits properties from a parent class. - Prototypal Inheritance: An instance is created by cloning an existing object that serves as a prototype. 
+This instance—often instantiated using a factory function or "Object.create()"—can benefit from selective inheritance from many different objects.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Give an example of a time that you used functional programming in JavaScript.
+Functional programming is one of the key paradigms that makes JavaScript stand out from other languages. Look for examples of functional purity, first-class functions, higher-order functions, or using functions as arguments and values. 
+It’s also a good sign if they have past experience working with functional languages like Lisp, Haskell, Erlang, or Clojure.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Give an example of a time when you used Prototypal OO in JavaScript.
+Prototypal OO is the other major programming paradigm that really lets JavaScript shine—objects linked to other objects (OLOO). You’re looking for knowledge of when and where to use prototypes, liberal use of "Object.assign()" or mixins, and a solid grasp of concepts like delegation and concatenative inheritance.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+What is a RESTful Web Service?
+REST stands for Representational State Transfer, an architectural style that has largely been adopted as a best practice for building web and mobile applications. RESTful services are designed to be lightweight, easy to maintain, and scaleable. 
+They are typically based on the HTTP protocol, make explicit use of HTTP methods (GET, POST, PUT, DELETE), are stateless, use intuitive URIs, and transfer XML/JSON data between the server and the client.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Explain the differences between one-way data flow and two-way data binding.
+This question may seem self-explanatory, but what you’re looking for is a developer who can demonstrate solid understanding of how data flows throughout the application. In two-way data binding, changes to the UI and changes to the model occur asynchronously—a change on one end is reflected on the other. 
+In one-way data binding, data only flows one way, and any changes that the user makes to the view will not be reflected in the model until the two are synced. Angular makes implementing two-way binding a snap, whereas React would be your framework of choice for deterministic one-way data flow.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Determine the output of the code below. Explain your answer.
+console.log(0.1 + 0.2);
+console.log(0.4 + 0.1 == 0.5);
+This is a trick question in that at first glance, you might expect the console to print out "0.3" and "true." The correct answer is that you can’t know for sure, because of how JavaScript treats floating point values. In fact, in the above example, it will print out:
+
+0.30000000000000004
+false
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Determine the output of the code below. Explain your answer.
+var myObject = {
+  egg: "plant",
+  func: function() {
+    var self = this;
+    console.log("outer func: this.egg = " + this.egg);
+    console.log("outer func: self.egg = " + self.egg);
+    (function() {
+      console.log("inner func: this.egg = " + this.egg);
+      console.log("inner func: self.egg = " + self.egg);
+    }());
+  }
+};
+myObject.func();
+This question is designed to test the interviewee’s understanding of scope and the "this" keyword. In the outer function, both "this" and "self" correctly refer to "myObject" and can subsequently access "egg." In the inner function, "self" remains within scope while "this" can no longer refer to "myObject"—resulting in the output below:
+
+outer func:  this.egg = plant
+outer func:  self.egg = plant
+inner func:  this.egg = undefined
+inner func:  self.egg = plant
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+Write a function that can determine whether a string is a palindrome in under 100 characters.
+A palindrome is a word, phrase, or sequence of letters that reads the same backwards or forwards. It also makes a great test for checking their ability to handle strings.
+
+function isPalindrome(str) {
+  str = str.replace(/s/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+How would you empty the array below?
+var emptyArray = [‘this’, ‘array’, ‘is’, ‘full’];
+This deceptively simple question is designed to test your prospective coder’s awareness of mitigating potential bugs when solving problems. The easiest method would be to set "emptyArray" equal to "[ ]"—which creates a new empty array. However, if the array is referenced anywhere else, the original array will remain unchanged. A more robust method would be "emptyArray.length - 0;"—which not only clears the array but updates all reference variables that point to this original array. Some possible solutions are listed below:
+
+emptyArray.length = 0;
+
+
+emptyArray.splice(0, emptyArray.length);
+
+
+while(emptyArray.length) {
+  emptyArray.pop();
+}
+
+emptyArray = []
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+Determine the output of the code below. Explain your answer.
+var lorem = { ipsum : 1};
+var output = (function() {
+  delete lorem.ipsum;
+  return lorem.ipsum;
+})();
+
+console.log(output);
+The output would be undefined, because the delete operator removed the property "ipsum" from the object "lorem" before the object was returned. 
+When you reference a deleted property, the result is undefined.
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
