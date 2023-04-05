@@ -119,3 +119,11 @@ Since, the property ’name’ does exist in the object obj, true will be printe
 
     ans : false false
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    10) All object have prototypes.
+       a) true 
+       b) false
+
+    ans: true 
+
+In JavaScript, every object has a prototype. A prototype is a mechanism through which objects in JavaScript inherit properties and methods from other objects.
+When a new object is created in JavaScript, it automatically gets a prototype object assigned to it. The prototype object is accessible through the object's __proto__ property, which is a reference to the object's prototype.
