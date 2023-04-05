@@ -24,3 +24,8 @@ ans : number
 Result is a number. However, if it is in strict mode ( 'use strict' ), then it will throw a reference error. 
 It doesn't allow implicit global variable declarations when it is in strict mode.
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the output of the immediately invoked function expression (IIFE) in JavaScript?
+
+    ans : depends 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
