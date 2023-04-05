@@ -18,7 +18,10 @@ console.log(typeof(typeof(NaN)));         //  string
 // ** typeof typeof ................ will ALWAYS be `string`.
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
-
+const object = { }
+const array = [ ]
+console.log(typeof object , typeof array)  // object object
+//-----------------------------------------------------------------------------------------------------------------------------------------------
 const object = { }
 const array = [ ]
 console.log(typeof object === typeof array)  // true
