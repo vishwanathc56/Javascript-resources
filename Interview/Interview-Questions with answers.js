@@ -7,7 +7,7 @@ Q: Should I use document.createDocumentFragment or document.createElement ?
  The fragment itself continues to exist but now has no children.
  //----------------------------------------------------------------------------------------------------------------------------------------------
 
- Q : What are differences between scope chaina and closure ?
+ Q : What are differences between scope chain and closures ?
    
  Q : What are differences between Regular Function & Arrow Function inJavascript ?
    
