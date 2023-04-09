@@ -136,3 +136,11 @@ console.log(z);
 
 ans : {a: 1, b: 3}
 
+
+This code creates three objects: x, y, and z.
+x is an object with two properties: a and b.
+y is an object with one property: b.
+z is a new object that combines the properties of x and y using the spread syntax (...). Since both x and y have a property named b, the value of the b property in y overwrites the value of the b property in x in the resulting object z.
+When we log z to the console, we get the following output:
+{ a: 1, b: 3 }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
