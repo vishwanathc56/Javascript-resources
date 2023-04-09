@@ -239,7 +239,10 @@ console.log(users[1] === user2)  // false
 20) const x = [1,2,3]
     const y = [1,2,3]
     console.log(x===y)  // false
-    console.log(x==y)  // false
+    console.log(x==y)   // false
+    
+    This is because x and y are two different arrays with the same elements. In JavaScript, when using the strict equality operator ===, two objects are only considered equal if they are the same object (i.e., they have the same reference in memory). Since x and y are two different objects with different references in memory, x === y evaluates to false.
+    The non-strict equality operator == attempts to perform type coercion before comparing the values. However, even with type coercion, two different objects with the same elements are not considered equal. Therefore, x == y also evaluates to false.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
 21) var test = "a";
     var result;
