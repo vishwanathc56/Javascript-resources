@@ -26,3 +26,16 @@ const object = { }
 const array = [ ]
 console.log(typeof object === typeof array)  // true
 //-----------------------------------------------------------------------------------------------------------------------------------------------
+console.log(typeof undefined == typeof NULL); 
+
+ans : true.
+
+Because we don't have a 'NULL' type in JS.
+
+console.log(typeof undefined) // undefined
+console.log(typeof null) // object
+BUT
+console.log(typeof NULL) // undefinde
+
+JavaScript is a case-sensitive language so 'null' is different from 'NULL' .
+//-----------------------------------------------------------------------------------------------------------------------------------------------
