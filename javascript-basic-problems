@@ -343,3 +343,10 @@ ans : 10
 The code defines a function that takes a parameter, logs its value and increments it using ++ operator. When the function is called with a constant variable count with a value of 10 as an argument, the function logs the original value of the parameter (10) and then increments it. The final value of the parameter is not used or returned in any way.
 Therefore, the output of the code will be 10.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    function getAge(...args){
+       console.log(typeof args) 
+    }
+    getAge(21)
+    
+    ans : object
+ //------------------------------------------------------------------------------------------------------------------------------------------------------------------
