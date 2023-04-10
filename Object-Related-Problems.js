@@ -150,4 +150,39 @@ When we log z to the console, we get the following output:
     console.log(b.b.c)
 
     ans : 3
+
+     The answer for the above snippet is 3. because in at initialisation
+        a will have {b: {c: 2} }
+        the b is copying the with new reference in a of first level and shares the same reference in 2nd level, so
+        b will be {b: {c: 2} }
+
+        by modifying the values in a in 2nd level, it also affects the b which is sharing the same reference of a.
+
+        so the object becomes {b: {c: 3} }
+
+        it will acts differently if we directly change
+        a.b={c:4}
+        b.b={c:5}
+        logging a.b.c will give 4 and b.b.c will give 5.
+        coz a and b have seperate memory reference in 1st level
+
+        if you want to have seperate memory reference for all levels of the clone/copy object then you can simply try
+
+        cloneObject = json.parse(json.stringify(originalObject)||"{}"));
+
+
+        note:
+        {
+        b : { //1st level
+        c: 4 //2nd level
+        }}
+
+  
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        const obj1 ={ property1:'15'};
+        const obj2 =Object.freeze(obj1);
+        obj2.property1='20';
+        console.log(obj2.property1);
+
+        ans : 15
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
