@@ -2,8 +2,10 @@ console.log(typeof null);                 //object
 console.log(typeof undefined);            //undefined
 console.log(null === undefined);          //false
 console.log(null == undefined);           //true
-
+console.log(null===null)                  //true 
+console.log(typeof null=== typeof null)   //true
 console.log(NaN === NaN);                 //false  
+
 This is because NaN (which stands for "Not a Number") is a special value in JavaScript that represents an undefined or unrepresentable value resulting from a mathematical operation.
 Importantly, NaN is not equal to any value, including itself. Therefore, when you compare NaN to itself using the === operator, the result will always be false. 
 To test for NaN values, you can use the isNaN() function instead. For example, isNaN(NaN) will return true.
