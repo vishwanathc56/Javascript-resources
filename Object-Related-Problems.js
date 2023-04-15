@@ -194,4 +194,15 @@ When we log z to the console, we get the following output:
         console.log(obj.__proto__ === MyObject.prototype)   //true
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-         
+        let person = { name: 'Lydia' };
+        const members = [person];
+        person = null;
+        console.log(members);
+
+        ans : [ { name: 'Lydia' } ]
+
+        In this code, we first create an object person with a name property of value 'Lydia'. We then create an array members and add the person object to it. This means that the members array contains a reference to the person object.
+We then set the person variable to null, which means that the person variable no longer references the person object. However, the members array still contains a reference to the original person object.
+Therefore, when we log the members array to the console, it still contains the original person object with the name property of value 'Lydia'.
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
