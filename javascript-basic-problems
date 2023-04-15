@@ -370,4 +370,7 @@ Therefore, the output of the code will be 10.
 console.log(typeof myFunc() );
 
 ans: string
+
+This equals a function --> typeof myFunc
+This equals a string --> typeof myFunc()
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
