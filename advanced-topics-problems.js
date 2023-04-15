@@ -44,3 +44,10 @@ This is allowed in JavaScript and it creates a global variable b.  However, the 
 This is because the variable b does not have a var, let, or const keyword in front of it, which means it gets attached to the global object. When the console.log() statement is executed, it tries to access the variables a and b. 
 Since a was declared inside the IIFE and is not accessible outside of it, it is undefined. On the other hand, b was declared globally, so it is accessible outside the IIFE, and it has a value of 5, so its typeof is "number".
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    (function(){
+    var a =b=3;
+    })();
+    console.log("a -? " +(typeof a!=="undefined"));   //a -? false
+    console.log("b -? " +(typeof b!=="undefined"));   //b -? true
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
