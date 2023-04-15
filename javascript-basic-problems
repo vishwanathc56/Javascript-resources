@@ -295,7 +295,7 @@ console.log(users[1] === user2)  // false
 
       console.log(typeof sayHi()) // number
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    var a = 1;
+ 26) var a = 1;
     function b() {
       a = 10;
       return a;
@@ -315,13 +315,13 @@ console.log(users[1] === user2)  // false
     a=b();
     console.log(a); // 10.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      const isTrue = true == [];
+27)   const isTrue = true == [];
       const isFalse = true == ![];
       console.log(isTrue + isFalse);
       
    Ans : 0 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-function func( n ) {
+28) function func( n ) {
 console.log( n );
 }
 let x = 7;
@@ -330,7 +330,7 @@ console.log(x)
 
 ans : 7 ,  8
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-const count = 10;
+29) const count = 10;
 
 const increment = (n) => {
 console.log(n++)
@@ -343,14 +343,14 @@ ans : 10
 The code defines a function that takes a parameter, logs its value and increments it using ++ operator. When the function is called with a constant variable count with a value of 10 as an argument, the function logs the original value of the parameter (10) and then increments it. The final value of the parameter is not used or returned in any way.
 Therefore, the output of the code will be 10.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    function getAge(...args){
+30)    function getAge(...args){
        console.log(typeof args) 
     }
     getAge(21)
     
     ans : object
  //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    let x =10;
+31)    let x =10;
     let y = 20;
 
     function add(){
@@ -363,3 +363,11 @@ Therefore, the output of the code will be 10.
     
     ans : 30 and 20
  //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ function myFunc(){
+    return "43" ;
+  }
+console.log(typeof myFunc() );
+
+ans: string
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
