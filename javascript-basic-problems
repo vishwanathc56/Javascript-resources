@@ -374,3 +374,24 @@ ans: string
 This equals a function --> typeof myFunc
 This equals a string --> typeof myFunc()
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    var a = 10;
+    {
+        var a = -10;
+    }
+    let b = a;
+    {
+        let b = -20;
+    }
+    console.log(b)
+    
+    ans : -10
+    
+    The output of the code will be -10.
+    Here's why:
+    First, we declare a variable a and assign it the value 10:
+    Then, we create a block using curly braces {} and declare a variable a inside that block, which we also assign the value -10. However, since var has function scope and not block scope, the a inside the block refers to the same variable as the a outside the block. So, the value of a is changed to -10:
+    Next, we declare a variable b using let and assign it the value of a, which is -10 at this point:
+    Now, we create another block using curly braces {} and declare a variable b inside that block, which we assign the value -20. This b variable has block scope and is separate from the b variable declared earlier, so it does not affect the value of b outside the block:
+    Finally, we log the value of b to the console, which is -10:
+    
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------
