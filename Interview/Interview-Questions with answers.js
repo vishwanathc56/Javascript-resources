@@ -11,4 +11,33 @@ Q: Should I use document.createDocumentFragment or document.createElement ?
    
  Q : What are differences between Regular Function & Arrow Function inJavascript ?
    
- 
+ //----------------------------------------------------------------------------------------------------------------------------------------------
+  
+  Q : Give an example for callback function .
+  
+  function getUserData(userId, callback) {
+    // Make an HTTP request to get user data
+    // Once the data is retrieved, call the callback function with the data
+    const userData = { name: 'John', age: 30 };
+    callback(userData);
+  }
+
+  getUserData(123, function(userData) {
+    console.log('User data:', userData);
+  });   
+
+                  //---------------or---------------//
+                  
+  // function
+  function greet(name, callback) {
+      console.log('Hi' + ' ' + name);
+      callback();
+  }
+
+  // callback function
+  function callMe() {
+      console.log('I am callback function');
+  }
+
+  // passing function as an argument
+  greet('Peter', callMe);
