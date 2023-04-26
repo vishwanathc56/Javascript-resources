@@ -41,3 +41,15 @@ Q: Should I use document.createDocumentFragment or document.createElement ?
 
   // passing function as an argument
   greet('Peter', callMe);
+  
+                                         //---------------or---------------//
+  
+  const modifyArr = (arr, cb)=>{
+    arr.push(4);
+    cb();
+  }
+
+  const arr = [1,2,3];
+  modifyArr(arr, ()=>{
+      console.log(arr);
+  })
