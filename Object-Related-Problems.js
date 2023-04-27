@@ -206,3 +206,13 @@ We then set the person variable to null, which means that the person variable no
 Therefore, when we log the members array to the console, it still contains the original person object with the name property of value 'Lydia'.
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    15) const obj = {name : 'javascript'};
+        Object.defineProperty(obj, "name", {enumerable : false})
+
+        console.log(Object.hasOwn(obj, 'name'));
+        console.log(Object.keys(obj).includes('name'));
+
+        ans: True,False
+
+        exp : Object.hasOwn() can access given objects enumerable and non enumerable properties, whereas Object.key() can only access objects enumerable properties.
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
