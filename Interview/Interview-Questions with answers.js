@@ -53,3 +53,11 @@ Q: Should I use document.createDocumentFragment or document.createElement ?
   modifyArr(arr, ()=>{
       console.log(arr);
   })
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+Q: Can sessionStorage share data between multiple tabs of the same URL?
+
+ ans : No, sessionStorage cannot share data between multiple tabs of the same URL. Each tab has its own sessionStorage object, which is isolated from the sessionStorage objects of other tabs. 
+
+The sessionStorage object is designed to store data that is specific to a particular browser tab or window. This is in contrast to the global localStorage object, which can be accessed from any tab or window within the same origin. 
+
+If you need to share data between multiple tabs of the same URL, you may consider using other techniques such as cookies, Web Storage, or IndexedDB.
