@@ -33,11 +33,9 @@ if (!Array.prototype.lastIndexOf) {
 
 const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 
-console.log(animals.lastIndexOf('Dodo'));
-// expected output: 3
+console.log(animals.lastIndexOf('Dodo')); // output: 3
 
-console.log(animals.lastIndexOf('Tiger'));
-// expected output: 1
+console.log(animals.lastIndexOf('Tiger')); // output: 1
 
-console.log(animals.lastIndexOf('Dodo', 2));
-// expected output: 0
+console.log(animals.lastIndexOf('Dodo', 2)); // output: 0
+
