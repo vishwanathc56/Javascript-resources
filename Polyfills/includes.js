@@ -9,3 +9,9 @@ if (!Array.prototype.includes) {
   };
 }
 
+
+const array = [5, 12, 8, 130, 44];
+const found = array.includes(5);
+
+// prints true
+console.log(found); // true
