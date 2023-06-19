@@ -79,5 +79,5 @@ function greeting({ country, ...rest }) {
     return console.log(`He is ${country} who is ${rest.age} old`);
 } 
 
-greeting({ name: "jon", age: 55, country: 'India' }); //He is India who is 55 old
+// greeting({ name: "jon", age: 55, country: 'India' }); //He is India who is 55 old
 
