@@ -24,3 +24,17 @@ ans : ReferenceError: hello is not defined
   console.log(value1);
 ans : 10
 //------------------------------------------------------------------------------------------------------------
+7. Which one is the answer?
+  function getY() {
+    y = 7;
+    console.log(y);
+  }
+  let y;
+  getY();
+a. undefined
+b. ReferenceError: Cannot access ‘y’ before initialization
+c. 7
+d. None
+
+ans: 7
+//------------------------------------------------------------------------------------------------------------
