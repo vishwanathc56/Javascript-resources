@@ -67,3 +67,22 @@ console.log(animals[1], clones[1]);
 ans : bear bear
       tiger sheep
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Which one is the answer? 
+  const Animal = ()=>{
+    this.name = 'lion';
+    this.getName = function(){
+      console.log(this.name);
+    };
+  };
+
+  let obj = new Animal();
+  obj.name = 'tiger';
+  obj.getName();
+
+a. lion
+b. undefined
+c. tiger
+d. Error
+
+ans :  TypeError: Animal is not a constructor
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
