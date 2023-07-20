@@ -11,11 +11,16 @@ ans: SyntaxError: Unexpected identifier
     console.log(hello);
   }
 a. ReferenceError: obj is not defined
-
 b. Syntax error
-
 c. hello
-
 d. ReferenceError: hello is not defined
+
 ans : ReferenceError: hello is not defined
+//------------------------------------------------------------------------------------------------------------
+8. What is the output of this code?
+  let value1 = 2; 
+  let value2 = 4;
+  value1 = value1 + value2 * value2 / value1;
+  console.log(value1);
+ans : 10
 //------------------------------------------------------------------------------------------------------------
