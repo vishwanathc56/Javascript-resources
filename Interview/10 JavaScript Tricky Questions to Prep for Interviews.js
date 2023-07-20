@@ -86,3 +86,56 @@ d. Error
 
 ans :  TypeError: Animal is not a constructor
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
+3. What is the output of this code?
+  
+let cat = Object.create({ type:'lion'});
+cat.size = 'large';
+let copyCat = {...cat};
+cat.type='tiger';
+console.log(copyCat.type, copyCat.size);
+
+ans : undefined large
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+2. What is the output of this code?
+  
+let channel ={name:'get to the point'};
+channel.content = channel;
+console.log(JSON.stringify(channel));
+
+a. {“name” : “Get to the point”}
+b. “{“name” : “Get to the point”}”
+c. “ {“name” : “Get to the point”, “channel”: “{“name” : “Get to the point”}” ”
+d. Error
+
+ans: TypeError: Converting circular structure to JSON
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Which one is the answer?
+class ProgrammingLanguage {
+static name = 'python';
+sayHello() {
+switch (this.name) {
+case 'java':
+console.log("System.out.print('hello');"); 
+    break; 
+case 'python': 
+  console.log("print('hello') "); 
+    break; 
+case 'html':
+console.log(' html is not programming language');
+default:
+console.log('No input provided');
+}
+}
+}
+let pl = new ProgrammingLanguage(); 
+ProgrammingLanguage.name = 'java';
+
+pl.sayHello();
+
+a. System.out.print(‘hello’);
+b. print(‘hello’)
+c. No input provided
+d. ReferenceError: sayHello is not defined
+
+ans: 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
