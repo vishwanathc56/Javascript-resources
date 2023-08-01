@@ -40,5 +40,22 @@ console.log(arr[i]);
 ans :  undefined undefined undefined undefined
 
 As setTimeout is asynchronous by the time it's callback function is executed the value of i would be four thus condole would print undefined as arr[4] results in array out of bounds thus you get undefined printed four times. To solve this you must wrap setTimeout inside a function taking i as argument and this function must be immediately invoked within the for loop for it to print array values on each of its iteration. This is a tricky question I had to get help from chatgpt.
+
+//To prints 1,2,3,4 and avoid undefined 
+
+let arr = [1, 2, 3, 4];
+for (let i = 0; i < 4; i++) {
+  setTimeout((index) => {
+    console.log(arr[index]);
+  }, 1000 * i, i);
+}
+       OR
+let arr = [1, 2, 3, 4];
+for (let i = 0; i < 4; i++) {
+  setTimeout(() => {
+    console.log(arr[i]);
+  }, 1000 * i);
+}
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------
  
