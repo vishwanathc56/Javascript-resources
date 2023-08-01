@@ -11,7 +11,6 @@ let deepCopy = JSON.parse(JSON.stringify(original));
 original.b.c = 3;
 
 console.log(original.b.c)
-
 console.log(shallowCopy.b.c)
 console.log(deepCopy.b.c)
 
