@@ -16,6 +16,14 @@ console.log(deepCopy.b.c)
 
 // ans :  3,3,2
 
+The reason the output is `3, 3, 2` instead of `3, 3, 3` is due to how shallow and deep copying work.
+
+1. Shallow Copy: `shallowCopy` is created using the spread operator (`{...original}`). Shallow copying creates a new object with a new reference to the top-level properties of the original object. However, for nested objects, it only creates a new reference to the memory address where the nested object is stored. So, both `original.b` and `shallowCopy.b` are pointing to the same nested object `{ c: 2 }`. When you change the value of `original.b.c` to `3`, it affects both `original.b.c` and `shallowCopy.b.c` because they are pointing to the same object.
+
+2. Deep Copy: `deepCopy` is created using `JSON.parse(JSON.stringify(original))`. This method creates a completely independent copy of the original object by first converting it to a JSON string and then parsing it back into a new object. This process breaks all the original references, resulting in a deep copy that is completely separate from the original object. When you later change the value of `original.b.c` to `3`, it doesn't affect `deepCopy.b.c` because they are entirely separate objects.
+
+So, the final output is `3, 3, 2` because `original.b.c` and `shallowCopy.b.c` are still pointing to the same object, while `deepCopy.b.c` is an independent copy that retains its original value `2`.
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 // Given an array of objects, write a function that creates a shallow copy and a deep copy of the array.
 
