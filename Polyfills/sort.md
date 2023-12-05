@@ -38,6 +38,7 @@ console.log(arr); // Output: [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
 
 //------------------------------------------------------------------------------------------------------------------
+```
 if (!Array.prototype.sortBy) {
   Array.prototype.sortBy = function(compareFn) {
     // Clone the array to avoid modifying the original
@@ -56,7 +57,7 @@ if (!Array.prototype.sortBy) {
     return arr.sort(compareFn);
   };
 }
-
+```
 This polyfill adds a sortBy() method to the Array.prototype object if it does not already exist. The sortBy() method creates a copy of the original array using the slice() method to avoid modifying the original array. It then uses the provided compareFn function to sort the cloned array using the Array.prototype.sort() method. If no compareFn function is provided, the polyfill uses a default comparison function that compares the elements of the array using the less-than and greater-than operators.
 
 To use this polyfill, you can call the sortBy() method on an array just like you would call the sort() method:
