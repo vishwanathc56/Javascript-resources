@@ -1,4 +1,43 @@
+```
+if (!Array.prototype.sortWithPolyfill) {
+  Array.prototype.sortWithPolyfill = function(compareFunction) {
+  
+    if (typeof compareFunction !== 'function') {
+      compareFunction = function(a, b) {
+        if (a === undefined || b === undefined) {
+          return 0;
+        }
+        if (a === b) {
+          return 0;
+        }
+        return a < b ? -1 : 1;
+      };
+    }
 
+    for (var i = 0; i < this.length; i++) {
+      for (var j = 0; j < this.length - 1 - i; j++) {
+        if (compareFunction(this[j], this[j + 1]) > 0) {
+          var temp = this[j];
+          this[j] = this[j + 1];
+          this[j + 1] = temp;
+        }
+      }
+    }
+
+    return this;
+  };
+}
+
+var arr = [3, 1, 4, 5, 9, 2, 6, 8, 7];
+arr.sortWithPolyfill();
+
+console.log(arr); // Output: [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+```
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------
 if (!Array.prototype.sortBy) {
   Array.prototype.sortBy = function(compareFn) {
     // Clone the array to avoid modifying the original
