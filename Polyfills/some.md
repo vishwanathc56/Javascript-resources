@@ -10,11 +10,11 @@ if (!Array.prototype.some) {
       throw new TypeError(callback + ' is not a function');
     }
 
-    var obj = Object(this);
-    var len = obj.length >>> 0;
+    var arrobj = this;
+    var arrlen = arrobj.length;
 
-    for (var i = 0; i < len; i++) {
-      if (i in obj && callback.call(thisArg, obj[i], i, obj)) {
+    for (var i = 0; i < arrlen; i++) {
+      if (i in arrobj && callback.call(thisArg, arrobj[i], i, arrobj)) {
         return true;
       }
     }
@@ -22,6 +22,7 @@ if (!Array.prototype.some) {
     return false;
   };
 }
+
 
 ```
 
