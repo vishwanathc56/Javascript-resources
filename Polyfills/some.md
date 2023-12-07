@@ -10,8 +10,8 @@ if (!Array.prototype.some) {
       throw new TypeError(callback + ' is not a function');
     }
 
-    var arrobj = this;
-    var arrlen = arrobj.length;
+    var obj = Object(this);
+    var len = obj.length >>> 0;
 
     for (var i = 0; i < arrlen; i++) {
       if (i in arrobj && callback.call(thisArg, arrobj[i], i, arrobj)) {
