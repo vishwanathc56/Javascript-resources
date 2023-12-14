@@ -30,6 +30,37 @@ if (!Array.prototype.lastIndexOf) {
   };
 }
 
+```
+if (!Array.prototype.lastIndexOf) {
+  Array.prototype.lastIndexOf = function(searchElement, fromIndex) {
+    if (this == null) {
+      throw new TypeError('Cannot convert this value to object');
+    }
+
+    var array = Object(this);
+    var length = array.length >>> 0;
+
+    if (length === 0) {
+      return -1;
+    }
+
+    var index = fromIndex | 0;
+
+    if (index >= length) {
+      index = length - 1;
+    }
+
+    for (; index >= 0; index--) {
+      if (index in array && array[index] === searchElement) {
+        return index;
+      }
+    }
+
+    return -1;
+  };
+}
+```
+
 
 const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 
