@@ -27,8 +27,8 @@ if (!Array.prototype.indexOf) {
 }
 ```
 
-```
 [medium article](https://medium.com/@stheodorejohn/javascript-indexof-polyfill-mastering-array-search-in-javascript-c345fe082150)
+```
 function customIndexOf(arr, searchElement, fromIndex = 0) {
   if (!Array.isArray(arr)) {
     throw new TypeError("First argument must be an array");
