@@ -26,6 +26,43 @@ if (!Array.prototype.indexOf) {
   };
 }
 ```
+
+```
+function customIndexOf(arr, searchElement, fromIndex = 0) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError("First argument must be an array");
+  }
+  const length = arr.length;
+  let startIndex = fromIndex >= 0 ? fromIndex : Math.max(0, length + fromIndex);
+  for (let i = startIndex; i < length; i++) {
+    if (arr[i] === searchElement) {
+      return i;
+    }
+  }
+  return -1;
+}
+```
+
+```
+if (!Array.prototype.customIndexOf) {
+  Array.prototype.customIndexOf = function(searchElement, fromIndex = 0) {
+    if (!Array.isArray(this)) {
+      throw new TypeError("Object is not an array");
+    }
+
+    const length = this.length;
+    let startIndex = fromIndex >= 0 ? fromIndex : Math.max(0, length + fromIndex);
+
+    for (let i = startIndex; i < length; i++) {
+      if (this[i] === searchElement) {
+        return i;
+      }
+    }
+
+    return -1;
+  };
+}
+```
 var array = [2, 9, 9];
 console.log(array.indexOf(2));     // 0
 console.log(array.indexOf(7));     // -1
