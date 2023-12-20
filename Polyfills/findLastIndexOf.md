@@ -1,4 +1,4 @@
-
+```
 if (!Array.prototype.findLastIndex) {
   Array.prototype.findLastIndex = function (predicate, thisArg) {
     if (this === undefined || this === null) {
@@ -26,5 +26,5 @@ const array = [1,2,3,12,13,8];
 const greaterThanTen = (element) => element > 10;
 
 console.log(array.findLastIndex(greaterThanTen)); //output: 4
-
+```
 
