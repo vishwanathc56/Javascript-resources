@@ -6,7 +6,7 @@ if (!Array.prototype.fill) {
       start = this.length + start;
     }
 
-    // If end is negative, set it to length+end
+    // If end is negative, set it to length+endhttps://github.com/vishwanathc56/Javascript-resources/blob/main/Polyfills/fill.js
     end = end || this.length;
     if (end < 0) {
       end = this.length + end;
@@ -22,11 +22,6 @@ if (!Array.prototype.fill) {
   };
 }
 
-This code first checks if Array.prototype.fill already exists. If it doesn't, it defines a new implementation that takes a value, start, and end argument, just like the native implementation.
-
-The polyfill then handles negative start and end arguments, just like the native implementation. It then loops over all elements between start and end and sets them to the value. Finally, it returns the modified array.
-
-This polyfill should work in most cases where the native Array.prototype.fill is not available.
 
 const array = [1, 2, 3, 4];
 console.log(array.fill(0, 2, 4));    // [ 1, 2, 0, 0 ]
