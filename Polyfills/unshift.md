@@ -1,5 +1,4 @@
-
-
+```
 if (!Array.prototype.unshift) {
   Array.prototype.unshift = function () {
     const args = Array.prototype.slice.call(arguments);
@@ -14,7 +13,7 @@ if (!Array.prototype.unshift) {
     return newLength;
   };
 }
-
+```
 const array = [1, 2, 3];
 
 array.unshift(4, 5);
@@ -22,7 +21,6 @@ array.unshift(4, 5);
 // prints [4,5,1,2,3]
 console.log(array);
 
-The if statement checks if the unshift method already exists on the Array.prototype. If it doesn't, we define the unshift method.
 
 Inside the unshift method, we first convert the arguments object to an array using Array.prototype.slice.call(arguments). Then, we calculate the original length of the array and the new length after adding the new elements.
 
