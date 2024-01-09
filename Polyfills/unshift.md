@@ -18,7 +18,7 @@ const array = [1, 2, 3];
 
 array.unshift(4, 5);
 
-// prints [4,5,1,2,3]
-console.log(array);
+console.log(array); // [4,5,1,2,3]
+
 
 
