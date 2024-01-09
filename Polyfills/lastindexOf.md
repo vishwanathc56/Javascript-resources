@@ -1,4 +1,4 @@
-//
+```
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function (searchElement, fromIndex) {
     if (this === undefined || this === null) {
@@ -29,7 +29,7 @@ if (!Array.prototype.lastIndexOf) {
     return -1;
   };
 }
-
+```
 ```
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function(searchElement, fromIndex) {
