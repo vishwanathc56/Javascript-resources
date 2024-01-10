@@ -24,8 +24,11 @@ if (!Array.prototype.unshift) {
 
 // Example usage:
 const myArray = [1, 2, 3]; 
+
 const newLength = myArray.unshift(-3, -2, -1, 0); 
+
 console.log(myArray);  // Output: [-3, -2, -1, 0, 1, 2, 3] 
+
 console.log(newLength);  // Output: 7
 
 
