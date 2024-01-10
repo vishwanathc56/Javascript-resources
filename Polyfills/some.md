@@ -10,7 +10,7 @@ if (!Array.prototype.some) {
       throw new TypeError(callback + ' is not a function');
     }
 
-    var obj = Object(this);
+    var arrobj = Object(this);
     var len = obj.length >>> 0;
 
     for (var i = 0; i < arrlen; i++) {
