@@ -24,6 +24,12 @@ if (!Array.prototype.some) {
 }
 ```
 
+var numbers = [1, 2, 3, 4, 5];
+var result = numbers.some(function(element) {
+  return element > 3;
+});
+console.log(result);  // Output: true
+
 //----------------------------------------------------------------------------------------------------------------------------------
 // Check if any element in the array satisfies the condition
 ```
