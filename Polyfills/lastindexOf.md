@@ -30,6 +30,9 @@ if (!Array.prototype.lastIndexOf) {
   };
 }
 ```
+
+//------------------------------------------------------------------------------------------------
+
 ```
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function(searchElement, fromIndex) {
