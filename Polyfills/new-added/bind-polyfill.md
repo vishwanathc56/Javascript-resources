@@ -18,6 +18,7 @@ Function.prototype.myBind = function (obj, ...args) {
 
 ```
 let newFunc = myFunc.myBind(obj, 'a_random_id')
+
 newFunc('New York') // Jack, a_random_id, New York
 
 
