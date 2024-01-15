@@ -1,4 +1,4 @@
-
+```
 Array.prototype.polyfillConcat = function() {
   const resultArray = [];
 
@@ -29,7 +29,7 @@ Array.prototype.polyfillConcat = function() {
 
   return resultArray;
 };
-
+```
 const array1 = [1, 2, 3];
 const array2 = [4, 5];
 const array3 = [6];
