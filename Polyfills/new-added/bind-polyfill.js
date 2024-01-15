@@ -15,6 +15,7 @@ Function.prototype.myBind = function (obj, ...args) {
     func.apply(obj, [...args, ...newArgs]);
   };
 };
+
 ```
 let newFunc = myFunc.myBind(obj, 'a_random_id')
 newFunc('New York') // Jack, a_random_id, New York
