@@ -16,7 +16,7 @@ if (!Array.prototype.reverse) {
       end--;
     }
 
-    return this; // Return the reversed array (for method chaining)
+    return this; 
   };
 }
 ```
