@@ -7,18 +7,16 @@ function customPushMethod()
     throw new TypeError('.push is not a function')
   }
 
-
   let length = this.length || 0;
   let argsLength = arguments.length; 
 
-//Now if we don't have any arguments to push 
-//we have to change nothing, just we have to return the length
+//Now if we don't have any arguments to push  we have to change nothing, just we have to return the length
+
  if(!argsLength)
   {
     return length;
   }
 
-  
   for(let i = 0 ; i < argsLength ; i++)
   {
     this[length + i] = arguments[i]; 
