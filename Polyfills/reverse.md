@@ -1,15 +1,4 @@
 ```
-Array.prototype.reverse = function() {
-  for (let i = 0; i < Math.floor(this.length / 2); i++) {
-    const temp = this[i];
-    this[i] = this[this.length - 1 - i];
-    this[this.length - 1 - i] = temp;
-  }
-  return this;
-};
-```
-
-```
 // Polyfill for Array.prototype.reverse
 if (!Array.prototype.reverse) {
   Array.prototype.reverse = function() {
@@ -30,6 +19,18 @@ if (!Array.prototype.reverse) {
     return this; // Return the reversed array (for method chaining)
   };
 }
+```
+
+
+```
+Array.prototype.reverse = function() {
+  for (let i = 0; i < Math.floor(this.length / 2); i++) {
+    const temp = this[i];
+    this[i] = this[this.length - 1 - i];
+    this[this.length - 1 - i] = temp;
+  }
+  return this;
+};
 ```
 // Example usage
 let myArray = [1, 2, 3, 4];
