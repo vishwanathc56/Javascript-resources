@@ -34,3 +34,35 @@ const factorial = memoize((x) => {
 console.log(factorial(5))
 console.log(factorial(6))
 ```
+
+### edgecase : if fn receiving non-JSON-serializable objects as arguments then 
+```
+const memoise = (fn) => {
+  const cache = {};
+
+  const customStringify = (args) => {
+    return args.map(arg => {
+      if (typeof arg === 'function') {
+        return arg.toString(); // Convert functions to their source code
+      } else if (arg instanceof Date) {
+        return arg.toISOString(); // Convert Dates to ISO string
+      } else {
+        return JSON.stringify(arg); // Default to JSON.stringify for other types
+      }
+    }).join(',');
+  };
+
+  return (...args) => {
+    let str = customStringify(args);
+
+    if (cache[str]) {
+      return cache[str];
+    } else {
+      const result = fn.apply(this, args);
+      cache[str] = result;
+      return result;
+    }
+  };
+};
+
+```
