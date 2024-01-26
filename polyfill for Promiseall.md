@@ -43,3 +43,6 @@ Promise.all(promises)
     console.error(error);
   });
 
+### OR
+
+[JSCAFE](https://jscafe.dev/index.php/q5-polyfill-of-promise-all/)
