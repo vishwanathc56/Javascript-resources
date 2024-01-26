@@ -26,7 +26,7 @@ if (!Array.prototype.filter) {
     return result;
   };
 }
-
+```
 // Example usage
 const numbers = [1, 2, 3, 4, 5];
 const evenNumbers = numbers.filter(function(num) {
@@ -35,4 +35,18 @@ const evenNumbers = numbers.filter(function(num) {
 
 console.log(evenNumbers); // Output: [2, 4]
 
+[jscafe](https://jscafe.dev/index.php/q9-polyfill-of-array-filter/)
+
+```
+Array.prototype.filter = function(callbackFn) {
+    const output = []
+    this.forEach((element, index) => {
+        if (callbackFn(element, index, this)) {
+            output.push(element)
+        }
+    })
+    return output
+}
+
+console.log([1,2,3,4,5,6].filter((e) => e % 2 === 0))
 ```
