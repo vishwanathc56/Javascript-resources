@@ -1,3 +1,4 @@
+```
 // Get references to the input, button, and task list elements
 const taskInput = document.getElementById('taskInput');
 const addButton = document.getElementById('addButton');
@@ -50,3 +51,4 @@ taskInput.addEventListener('keyup', function (event) {
         addTask();
     }
 });
+```
