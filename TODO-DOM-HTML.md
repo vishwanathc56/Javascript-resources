@@ -1,4 +1,26 @@
 ```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button id="addButton">Add</button>
+
+    <ul id="taskList">
+        <!-- Tasks will be added dynamically here -->
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+```
+
+
+```
 // Get references to the input, button, and task list elements
 const taskInput = document.getElementById('taskInput');
 const addButton = document.getElementById('addButton');
