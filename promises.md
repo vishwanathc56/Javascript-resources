@@ -19,11 +19,11 @@ setTimeout(() => {
 console.log('end');
 
 ```
-output: start
-1
-promise1: Promise { <pending> }
-end
-Async operation completed
-promise1 after 2 seconds: Promise { 'Operation successful' }
+output: start  
+1  
+promise1: Promise { <pending> }  
+end  
+Async operation completed  
+promise1 after 2 seconds: Promise { 'Operation successful' }  
 
 
