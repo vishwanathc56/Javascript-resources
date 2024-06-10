@@ -19,7 +19,7 @@ setTimeout(() => {
 console.log('end');
 
 ```
-//output: 
+//output:   
 start  
 1  
 promise1: Promise { <pending> }  
