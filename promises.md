@@ -27,4 +27,31 @@ end
 Async operation completed  
 promise1 after 2 seconds: Promise { 'Operation successful' }  
 
+```
+//q2
+
+console.log('start');
+
+const promise1 = new Promise((resolve, reject) => {
+   console.log(1);
+   resolve('Operation successful');
+   console.log('Async operation completed');
+});
+
+console.log('promise1:', promise1);
+
+promise1.then((result) => {
+  console.log(result);
+});
+
+console.log('end');
+
+```
+//output:   
+start  
+1  
+Async operation completed  
+promise1: Promise { 'Operation successful' }  
+end  
+Operation successful  
 
