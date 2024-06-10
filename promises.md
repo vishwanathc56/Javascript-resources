@@ -90,4 +90,37 @@ end
 Async operation completed  
 Operation failed  
 promise1 after 2 seconds: Promise { <pending> }  
-  
+
+```
+//q4
+console.log('start');
+
+const promise1 = new Promise((resolve, reject) => {
+   console.log(1);
+   // No resolve or reject call
+});
+
+console.log('promise1:', promise1);
+
+promise1.then((result) => {
+  console.log(result);
+}).catch((error) => {
+  console.error(error);
+});
+
+setTimeout(() => {
+  console.log('promise1 after 2 seconds:', promise1);
+}, 2000);
+
+console.log('end');
+
+```
+//output:   
+start  
+1  
+promise1: Promise { <pending> }  
+end  
+undefined  
+promise1 after 2 seconds: Promise { <pending> }  
+
+
