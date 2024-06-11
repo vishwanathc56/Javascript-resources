@@ -1,6 +1,6 @@
 # Key Points to Remember:
 ```
-Synchronous Code:
+### Synchronous Code:
 
 All synchronous code is executed first, line by line, in the order it appears.
 This code runs to completion before any asynchronous code is executed.
