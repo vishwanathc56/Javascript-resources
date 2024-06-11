@@ -32,3 +32,44 @@
         setImmediate (Node.js)
         I/O operations (e.g., file system operations, network requests)
 
+
+### Example to Illustrate Execution Order:
+```
+console.log("start");
+
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+Promise.resolve()
+  .then(() => {
+    console.log("promise1");
+  })
+  .then(() => {
+    console.log("promise2");
+  });
+
+console.log("end");
+```
+### 1. Synchronous code runs first:
+         console.log("start"); logs "start".
+         setTimeout schedules a macrotask.
+         Promise.resolve().then(...) schedules microtasks.
+         console.log("end"); logs "end".
+         
+### 2. Microtasks run next:
+
+         promise1 logs "promise1".
+         
+         promise2 logs "promise2".
+         
+### 3. Microtasks run next:Macrotasks run last:
+
+         setTimeout logs "setTimeout".
+         
+Output:  
+start  
+end  
+promise1  
+promise2  
+setTimeout  
