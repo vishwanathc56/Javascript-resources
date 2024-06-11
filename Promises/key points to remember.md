@@ -1,4 +1,4 @@
-##Key Points to Remember:##
+**Key Points to Remember:**
 ```
 Synchronous Code:
 
