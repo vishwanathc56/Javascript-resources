@@ -1,5 +1,5 @@
 1)//shallow cloning vs deep cloning
-
+```
 let original = { a: 1, b: { c: 2 } };
 
 let shallowCopy = {...original}
@@ -15,7 +15,7 @@ console.log(shallowCopy.b.c)
 console.log(deepCopy.b.c)
 
 // ans :  3,3,2
-
+```
 The reason the output is `3, 3, 2` instead of `3, 3, 3` is due to how shallow and deep copying work.
 
 1. Shallow Copy: `shallowCopy` is created using the spread operator (`{...original}`). Shallow copying creates a new object with a new reference to the top-level properties of the original object. However, for nested objects, it only creates a new reference to the memory address where the nested object is stored. So, both `original.b` and `shallowCopy.b` are pointing to the same nested object `{ c: 2 }`. When you change the value of `original.b.c` to `3`, it affects both `original.b.c` and `shallowCopy.b.c` because they are pointing to the same object.
