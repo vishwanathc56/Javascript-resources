@@ -1,3 +1,4 @@
+//o(n2) and o(n+d) d=depth
 function flatten(arr) {
   let flattened = [];
   
@@ -11,6 +12,25 @@ function flatten(arr) {
   
   return flattened;
 }
+
+//o(n) and o(d) d=depth
+function flatten(arr) {
+  const result = [];
+  
+  function helper(subArr) {
+    subArr.forEach(element => {
+      if (Array.isArray(element)) {
+        helper(element);
+      } else {
+        result.push(element);
+      }
+    });
+  }
+  
+  helper(arr);
+  return result;
+}
+
 
 var input = [
   1, 2, 3,
