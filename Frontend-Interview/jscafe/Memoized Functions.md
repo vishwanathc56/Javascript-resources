@@ -66,3 +66,51 @@ const memoise = (fn) => {
 };
 
 ```
+## &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 
+
+```
+const memoizeWithMap = (fn) => {
+  const cache = new Map();
+  return (...args) => {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      console.log(`Fetching from cache for args ${args}`);
+      return cache.get(key);
+    } else {
+      console.log(`Computing result for args ${args}`);
+      const result = fn(...args);
+      cache.set(key, result);
+      return result;
+    }
+  };
+};
+
+// Example usage:
+const slowFunction = (num) => {
+  // Simulate a slow computation
+  return num * num;
+};
+
+const memoizedFunction = memoizeWithMap(slowFunction);
+
+console.log(memoizedFunction(5)); // Computing result for args 5
+console.log(memoizedFunction(5)); // Fetching from cache for args 5
+
+```
+```
+Advantages of using Map over plain objects:
+
+Performance:
+
+Map is generally faster for frequent additions and deletions compared to plain objects.
+Map preserves the order of entries which can be beneficial in some use cases.
+Key Types:
+
+Map allows keys of any type (including objects and functions), whereas plain objects only allow strings or symbols as keys.
+Built-in Methods:
+
+Map provides a rich set of built-in methods (set, get, has, delete, etc.) that make it easier to work with.
+No Prototype Inheritance:
+
+Plain objects inherit from Object.prototype, which can sometimes lead to unexpected behavior if keys conflict with property names on the prototype chain. Map objects do not have this issue.
+```
